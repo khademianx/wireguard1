@@ -12,7 +12,7 @@ fi
 mkdir /opt/wireguard && \
     cd /opt/wireguard && \
     curl -o ./docker-compose.yml https://raw.githubusercontent.com/khademianx/relay/refs/heads/main/docker-compose.yml && \
-    curl -o ./.env https://raw.githubusercontent.com/wireguard-panel/wireguard-panel/refs/heads/main/.env.example
+    curl -o ./.env https://raw.githubusercontent.com/khademianx/wireguard1/refs/heads/main/.env.example
 
 docker run --rm --entrypoint="" -v /opt/wireguard/.env:/app/.env ahmadrezaei/wireguard-panel sh -c "php artisan key:generate"
 
